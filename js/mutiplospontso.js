@@ -67,7 +67,21 @@
         			shape: shape,
         			title: beach.dataCaptura+"\n"+"Percorrido "+(beach.distancia < 1 ? (beach.distancia * 1000)+"m" : beach.distancia+"km")+"\n"+"Velocidade "+((beach.velocidade)+"km/h"),
         			zIndex: 3
-    			}); 
+    			});
+    			//box de informações	
+           		(function(marker, i) {
+            	 	// add click event
+                 	google.maps.event.addListener(marker, 'click', function() {
+                 		infowindow = new google.maps.InfoWindow({
+                    		content: beach.dataCaptura+"<br/>"+"Percorrido "+(beach.distancia < 1 ? (beach.distancia * 1000)+"m" : beach.distancia+"km")+"<br/>"+"Velocidade "+((beach.velocidade)+"km/h"),
+                    	});
+                   		infowindow.open(map, marker);
+                   		google.maps.event.addListener(marker, 'mouseout', function(){
+                   			infowindow.close();
+                   		});
+                 	});
+            	})(marker, i);
+    			//box de informações					
     		}else if(i == (locations.length - 1)){//final 
 				var myLatLng = new google.maps.LatLng(beach.latitude, beach.longitude);
     			var marker = new google.maps.Marker({
@@ -77,7 +91,21 @@
         			shape: shape,
         			title: beach.dataCaptura+"\n"+"Percorrido "+(beach.distancia < 1 ? (beach.distancia * 1000)+"m" : beach.distancia+"km")+"\n"+"Velocidade "+((beach.velocidade)+"km/h"),
         			zIndex: 3
-    			});   		    				   				
+    			});
+    			//box de informações	
+           		(function(marker, i) {
+            	 	// add click event
+                 	google.maps.event.addListener(marker, 'click', function() {
+                 		infowindow = new google.maps.InfoWindow({
+                    		content: beach.dataCaptura+"<br/>"+"Percorrido "+(beach.distancia < 1 ? (beach.distancia * 1000)+"m" : beach.distancia+"km")+"<br/>"+"Velocidade "+((beach.velocidade)+"km/h"),
+                    	});
+                   		infowindow.open(map, marker);
+                   		google.maps.event.addListener(marker, 'mouseout', function(){
+                   			infowindow.close();
+                   		});
+                 	});
+            	})(marker, i);
+    			//box de informações					
    			}else{
 				var myLatLng = new google.maps.LatLng(beach.latitude, beach.longitude);
     			var marker = new google.maps.Marker({
@@ -87,7 +115,21 @@
         			shape: shape,
         			title: beach.dataCaptura+"\n"+"Percorrido "+(beach.distancia < 1 ? (beach.distancia * 1000)+"m" : beach.distancia+"km")+"\n"+"Velocidade "+((beach.velocidade)+"km/h"),
         			zIndex: -1
-    			});   				
+    			});
+    			//box de informações	
+           		(function(marker, i) {
+            	 	// add click event
+                 	google.maps.event.addListener(marker, 'click', function() {
+                 		infowindow = new google.maps.InfoWindow({
+                    		content: beach.dataCaptura+"<br/>"+"Percorrido "+(beach.distancia < 1 ? (beach.distancia * 1000)+"m" : beach.distancia+"km")+"<br/>"+"Velocidade "+((beach.velocidade)+"km/h"),
+                    	});
+                   		infowindow.open(map, marker);
+                   		google.maps.event.addListener(marker, 'mouseout', function(){
+                   			infowindow.close();
+                   		});
+                 	});
+            	})(marker, i);
+    			//box de informações	   				
    			}
 
   		}
