@@ -2,9 +2,10 @@
 audio.src = "C:/Documents and Settings/Felipe/Desktop/Rod Stewart E Amy Belle I Dont Want To Talk About It.mp3";
 audio.play();*/
 function initialize() {
- 
+//-22.9035393, -43.2095869
+//-8.0631495, -34.87131120000004
 // Exibir mapa;
-var myLatlng = new google.maps.LatLng(-8.0631495, -34.87131120000004);
+var myLatlng = new google.maps.LatLng(-22.9035393, -43.2095869);
 var mapOptions = {
 zoom: 17,
 center: myLatlng,
