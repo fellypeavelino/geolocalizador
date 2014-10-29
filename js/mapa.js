@@ -35,7 +35,7 @@ animation: google.maps.Animation.DROP
 function loadScript() {
 var script = document.createElement("script");
 script.type = "text/javascript";
-script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyDeHb17So0QupSGO_d6b8X-OyvJ32UQehs&sensor=true&callback=initialize";
+script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyB4wAp6oVUcNT8oZVgYL0PU6e2tkMWmElg&sensor=true&callback=initialize";
 document.body.appendChild(script);
 }
  
